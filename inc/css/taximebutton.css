@@ -1,0 +1,27 @@
+.taximebutton {
+	display: inline-block;
+	padding: 6px 12px;
+	margin: 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.428571429;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+a.taximebutton {
+	color: #fff;
+	background: #070716;
+	border-color: #070716;
+	text-decoration: none !important;
+}
+
+.taximebutton:hover {
+	background: #fff;
+	color: #070716;
+	text-decoration: none !important;
+}
