@@ -38,7 +38,7 @@ We offer support in two places:-
 
 On Github
 ---------
-This project is now on github, [you can view the repository here](https://github.com/rhyswynne/inline-tweet-sharer/). There are other versions, but this is the one I've put up, so where all the developmental will be tracked.
+This project is now on github, [you can view the repository here](https://github.com/rhyswynne/wp-taxi-me). There are other versions, but this is the one I've put up, so where all the developmental will be tracked.
 
 Installation
 ============
