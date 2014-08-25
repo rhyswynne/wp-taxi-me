@@ -53,7 +53,7 @@ function wptaxime_options_page() {
                     <div class="pea_admin_box">
 
                         <h2><?php _e( 'Like this Plugin?', 'inline-tweet-sharer' ); ?></h2>
-                        <a href="<?php echo WP_TAXI_MEEXTEND_URL; ?>" target="_blank"><button type="submit" class="pea_admin_green"><?php _e( 'Rate this plugin', 'inline-tweet-sharer' ); ?>	&#9733;	&#9733;	&#9733;	&#9733;	&#9733;</button></a><br><br>
+                        <a href="<?php echo WP_TAXI_ME_EXTEND_URL; ?>" target="_blank"><button type="submit" class="pea_admin_green"><?php _e( 'Rate this plugin', 'inline-tweet-sharer' ); ?>	&#9733;	&#9733;	&#9733;	&#9733;	&#9733;</button></a><br><br>
 
                         <div id="fb-root"></div>
 
@@ -66,17 +66,17 @@ function wptaxime_options_page() {
                             }(document, 'script', 'facebook-jssdk'));
                         </script>
 
-                        <div class="fb-like" data-href="<?php echo WP_TAXI_MEPLUGIN_URL; ?>" data-send="true" data-layout="button_count" data-width="250" data-show-faces="true"></div>
+                        <div class="fb-like" data-href="<?php echo WP_TAXI_ME_PLUGIN_URL; ?>" data-send="true" data-layout="button_count" data-width="250" data-show-faces="true"></div>
                         <br>
-                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo WP_TAXI_MEPLUGIN_URL; ?>" data-text="Just been using <?php echo WP_TAXI_MEPLUGIN_NAME; ?> #WordPress plugin" data-via="<?php echo WP_TAXI_MEAUTHOR_TWITTER; ?>" data-related="WPBrewers">Tweet</a>
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo WP_TAXI_ME_PLUGIN_URL; ?>" data-text="Just been using <?php echo WP_TAXI_ME_PLUGIN_NAME; ?> #WordPress plugin" data-via="<?php echo WP_TAXI_ME_AUTHOR_TWITTER; ?>" data-related="WPBrewers">Tweet</a>
 
                         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
                         <br>
-                        <a href="http://bufferapp.com/add" class="buffer-add-button" data-text="Just been using <?php echo WP_TAXI_MEPLUGIN_NAME; ?> #WordPress plugin" data-url="<?php echo WP_TAXI_MEPLUGIN_URL; ?>" data-count="horizontal" data-via="<?php echo WP_TAXI_MEAUTHOR_TWITTER; ?>">Buffer</a><script type="text/javascript" src="http://static.bufferapp.com/js/button.js"></script>
+                        <a href="http://bufferapp.com/add" class="buffer-add-button" data-text="Just been using <?php echo WP_TAXI_ME_PLUGIN_NAME; ?> #WordPress plugin" data-url="<?php echo WP_TAXI_ME_PLUGIN_URL; ?>" data-count="horizontal" data-via="<?php echo WP_TAXI_ME_AUTHOR_TWITTER; ?>">Buffer</a><script type="text/javascript" src="http://static.bufferapp.com/js/button.js"></script>
 
                         <br>
-                        <div class="g-plusone" data-size="medium" data-href="<?php echo WP_TAXI_MEPLUGIN_URL; ?>"></div>
+                        <div class="g-plusone" data-size="medium" data-href="<?php echo WP_TAXI_ME_PLUGIN_URL; ?>"></div>
 
                         <script type="text/javascript">
                             window.___gcfg = {lang: 'en-GB'};
