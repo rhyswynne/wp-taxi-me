@@ -101,8 +101,6 @@ function wptaxime_options_page() {
                         </script>
                     </div>
 
-                    <center><a href="<?php echo WP_TAXI_ME_DONATE_LINK; ?>" target="_blank"><img class="paypal" src="<?php echo plugins_url( 'paypal.gif' , __FILE__ ); ?>" width="147" height="47" title="Please Donate - it helps support this plugin!"></a></center>
-
                 <div class="pea_admin_box">
                     <h2><?php _e( 'About the Author', 'inline-tweet-sharer' ); ?></h2>
 
