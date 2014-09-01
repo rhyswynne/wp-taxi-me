@@ -33,7 +33,7 @@ For Support
 -----------
 We offer support in two places:-
 
-* Support on the [WordPress.org Support Board](http://wordpress.org/support/plugin/inline-tweet-sharer)
+* Support on the [WordPress.org Support Board](http://wordpress.org/support/plugin/wptaxime)
 * A [priority support forum](http://winwar.co.uk/priority-support/), which offers same-day responses.
 
 On Github

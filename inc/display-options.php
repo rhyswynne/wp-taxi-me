@@ -45,7 +45,9 @@ function wptaxime_build_button() {
 	} 
 
 	if ( $options['registration'] ) {
-		$echostring .= '<p class="taxibuttonwrapper"><a href="https://www.uber.com/invite/s94j3" class="taximebutton">' . __( 'Register for Uber', 'wptaxime' ) . '</a></p>';
+		$afflink = apply_filters( 'wptaxime_change_afflink', 'https://www.uber.com/invite/s94j3' );
+
+		$echostring .= '<p class="taxibuttonwrapper"><a href="'.$afflink.'" class="taximebutton">' . __( 'Register for Uber', 'wptaxime' ) . '</a></p>';
 	}
 
 	if ( $options['linkback'] ) {

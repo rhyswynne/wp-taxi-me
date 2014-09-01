@@ -129,3 +129,21 @@ span.mce_inlinetweetsharer:before, i.mce-i-inlinetweetsharer:before, i.mce-i-inl
 }
 
 
+
+.wptaxime_admin_box {
+    /* color: #fff; */
+    border-color: #73ba71;
+    background: #f2fff2;
+}
+
+.wptaxime_admin_box h2 {
+    /* color: #fff; */
+}
+
+.wptaxime_admin_box .pea_admin_green {
+    font-size: 18px;
+}
+
+.text-center {
+    text-align: center;
+}
