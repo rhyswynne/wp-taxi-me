@@ -18,6 +18,13 @@ The plugin hides itself if the user isn't on mobile, but users can still registe
 
 To add to the post or page, please use the `[taxi-me]` shortcode within the post content.
 
+WP Taxi Me Premium
+------------------
+[**WP Taxi Me Premium**](http://winwar.co.uk/plugins/wp-taxi-premium/) is a plugin that allows you deeper integration with your website. The features the premium version has at the time of publication is the following:-
+
+* Style Buttons Easily With a Graphical Interface
+* Earn Money by using your own affiliate code with the plugin!
+
 About Winwar Media
 ------------------
 This plugin is made by [**Winwar Media**](http://winwar.co.uk/), a WordPress Development and Training Agency in Manchester, UK.
