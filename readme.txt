@@ -2,7 +2,7 @@
 Contributors: rhyswynne
 Tags: uber, taxi, business
 Requires at least: 3.0.1
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,9 +17,12 @@ The plugin hides itself if the user isn't on mobile, but users can still registe
 
 To add to the post or page, please use the `[taxi-me]` shortcode within the post content.
 
+For more documentation, check out the [WP Taxi Me Documentation Page](http://winwar.co.uk/documentation/wp-taxi-me/).
+
 = WP Taxi Me Premium =
 [**WP Taxi Me Premium**](http://winwar.co.uk/plugins/wp-taxi-premium/) is a plugin that allows you deeper integration with your website. The features the premium version has at the time of publication is the following:-
 
+* Give customers an ETA and a price.
 * Style Buttons Easily With a Graphical Interface
 * Earn Money by using your own affiliate code with the plugin!
 
@@ -50,11 +53,18 @@ First of all, check if your city is covered. You can check using [Uber's Support
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Fill in your business or location details in the Settings > WP Taxi Me menu.
 
+Further information is on the [WP Taxi Me Documentation page](http://winwar.co.uk/documentation/wp-taxi-me/).
+
 == Frequently Asked Questions ==
 
 Coming Soon!
 
 == Changelog ==
+
+= 1.1 =
+* Fixed a couple of warning in display mode.
+* Added a "Button Text" filter.
+* Added a "Debug" Mode
 
 = 1.0 =
 * First Release

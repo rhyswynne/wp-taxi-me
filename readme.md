@@ -1,11 +1,17 @@
 WP Taxi Me
 ==========
 Contributors: rhyswynne
+
 Tags: uber, taxi, business
+
 Requires at least: 3.0.1
+
 Tested up to: 4.0
+
 Stable tag: trunk
+
 License: GPLv2 or later
+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Get customers to your business by allowing them to order a taxi to your site via Uber
@@ -17,6 +23,8 @@ This plugin adds either in the main text or a widget the ability to order a taxi
 The plugin hides itself if the user isn't on mobile, but users can still register for Uber.
 
 To add to the post or page, please use the `[taxi-me]` shortcode within the post content.
+
+For more documentation, check out the [WP Taxi Me Documentation Page](http://winwar.co.uk/documentation/wp-taxi-me/).
 
 WP Taxi Me Premium
 ------------------

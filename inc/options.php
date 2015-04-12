@@ -157,6 +157,7 @@ function wptaxime_admin_init() {
     add_settings_field( 'wptaxime_address_2', __( 'Address 2', 'wptaxime' ), 'wptaxime_address_2', 'wptaxime_options_page', 'wptaxime_main' );
     add_settings_field( 'wptaxime_state', __( 'State/County', 'wptaxime' ), 'wptaxime_state', 'wptaxime_options_page', 'wptaxime_main' );
     add_settings_field( 'wptaxime_zip', __( 'Zip/Post Code', 'wptaxime' ), 'wptaxime_zip', 'wptaxime_options_page', 'wptaxime_main' );
+    add_settings_field( 'wptaxime_debug', __( 'Debug Mode', 'wptaxime' ), 'wptaxime_debug', 'wptaxime_options_page', 'wptaxime_main' );
 
     add_settings_section( 'wptaxime_sharing', __( 'Sharing Settings', 'wptaxime' ), 'wptaxime_sharing_text', 'wptaxime_options_page' );
     add_settings_field( 'wptaxime_registration', __( 'Include Register for Uber Button', 'wptaxime' ), 'wptaxime_registrationlink', 'wptaxime_options_page', 'wptaxime_sharing' );
@@ -196,6 +197,15 @@ function wptaxime_zip() {
     echo "<input id='wptaxime_zip' name='wptaxime_options[zip]' size='40' type='text' value='{$options['zip']}' />";
 }
 
+function wptaxime_debug() {
+    $options = get_option( 'wptaxime_options' );
+    $debug = "";
+    if ( isset ( $options['debug'] ) ) {
+        $debug = $options['debug'];
+    }
+    echo "<input id='wptaxime_debug' name='wptaxime_options[debug]' type='checkbox' value='1' " . checked( $debug, 1, false ) . "/>";
+}
+
 function wptaxime_sharing_text() {
     ?><p><?php _e( 'Here are some options to share WP Taxi Me.', 'wptaxime' ); ?></p>
 <?php
@@ -220,6 +230,7 @@ function wptaxime_options_validate( $input ) {
     $options['zip'] = trim( $input['zip'] );
     $options['registration'] = trim( $input['registration'] );
     $options['linkback'] = trim( $input['linkback'] );
+    $options['debug'] = trim( $input['debug'] );
 
     //wp_die( print_r( $input ) );
 

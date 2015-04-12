@@ -55,8 +55,8 @@ class WP_Taxi_Me_Widget_class extends WP_Widget {
 		$title_name = $this->get_field_name( 'widget_title' );
 		$text_id = $this->get_field_id( 'widget_text' );
 		$text_name = $this->get_field_name( 'widget_text' );
-		echo "\r\n".'<p><label for="'.$title_id.'">'.__( 'Title' ).': <input type="text" class="widefat" id="'.$title_id.'" name="'.$title_name.'" value="'.attribute_escape( $instance['widget_title'] ).'" /><label></p>';
-		echo "\r\n".'<p><label for="'.$text_id.'">'.__( 'Text' ).': <input type="text" class="widefat" id="'.$text_id.'" name="'.$text_name .'" value="'.attribute_escape( $instance['widget_text'] ).'" /><label></p>';
+		echo "\r\n".'<p><label for="'.$title_id.'">'.__( 'Title' ).': <input type="text" class="widefat" id="'.$title_id.'" name="'.$title_name.'" value="'.esc_attr( $instance['widget_title'] ).'" /><label></p>';
+		echo "\r\n".'<p><label for="'.$text_id.'">'.__( 'Text' ).': <input type="text" class="widefat" id="'.$text_id.'" name="'.$text_name .'" value="'.esc_attr( $instance['widget_text'] ).'" /><label></p>';
 
 	}
 
