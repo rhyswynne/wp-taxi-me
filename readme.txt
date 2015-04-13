@@ -62,9 +62,9 @@ Coming Soon!
 == Changelog ==
 
 = 1.1 =
-* Fixed a couple of warning in display mode.
+* Fixed a couple of warnings in display mode.
 * Added a "Button Text" filter.
-* Added a "Debug" Mode
+* Added a "Debug" Mode.
 
 = 1.0 =
 * First Release

@@ -32,27 +32,35 @@
 		$name = rawurlencode( $options['business_name'] );
 		$address = $options['address_1'] . " " . $options['address_2'] . " " . $options['state'] . " " . $options['zip'];
 
-		$geoloc = wptaxime_get_latlng_address( $address );
+		// Do a check to make sure that we have set the lat/lng. If not, get it.
+		if ( !array_key_exists( 'lat', $options ) || !array_key_exists( 'lng', $options ) ) {
+
+			$geoloc = wptaxime_get_latlng_address( $address );
+
+			$options['lat'] = $geoloc['lat'];
+			$options['lng'] = $geoloc['lng'];
+
+		}
 
 		$address = rawurlencode( $address );
 
 		$echostring = '';
 
-		if ( !empty($options['debug'])) {
+		if ( !empty($options['debug']) || ( $options['debug'] ) ) {
 			
+			$buttontext = apply_filters( 'wptaxime_button_text', __( 'Book A Taxi Here', 'wptaxime' )  );
+			$echostring = '<p class="taxibuttonwrapper"><a href="uber://?action=setPickup&pickup=my_location&dropoff[nickname]='. $name .'&dropoff[formatted_address]=' . $address . '&dropoff[latitude]='. $options['lat'] .'&dropoff[longitude]='. $options['lng'] .'" class="taximebutton">'. $buttontext . '</a></p>';
+			
+		} else {
+
 			if ( wp_is_mobile() ) {
 
-			}
-
-			$buttontext = apply_filters( 'wptaxime_button_text', __( 'Book A Taxi Here', 'wptaxime' )  );
-
-			$echostring = '<p class="taxibuttonwrapper"><a href="uber://?action=setPickup&pickup=my_location&dropoff[nickname]='. $name .'&dropoff[formatted_address]=' . $address . '&dropoff[latitude]='. $geoloc['lat'] .'&dropoff[longitude]='. $geoloc['lng'] .'" class="taximebutton">'. $buttontext . '</a></p>';
-
-		if ( !empty($options['debug'])) {
+				$buttontext = apply_filters( 'wptaxime_button_text', __( 'Book A Taxi Here', 'wptaxime' )  );
+				$echostring = '<p class="taxibuttonwrapper"><a href="uber://?action=setPickup&pickup=my_location&dropoff[nickname]='. $name .'&dropoff[formatted_address]=' . $address . '&dropoff[latitude]='. $options['lat'] .'&dropoff[longitude]='. $options['lng'] .'" class="taximebutton">'. $buttontext . '</a></p>';
 
 			}
-			
-		} 
+
+		}
 
 		if ( $options['registration'] ) {
 			$afflink = apply_filters( 'wptaxime_change_afflink', 'https://www.uber.com/invite/s94j3' );
