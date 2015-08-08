@@ -6,7 +6,7 @@ Tags: uber, taxi, business
 
 Requires at least: 3.0.1
 
-Tested up to: 4.0
+Tested up to: 4.3
 
 Stable tag: trunk
 
