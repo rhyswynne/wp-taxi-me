@@ -61,6 +61,14 @@ Coming Soon!
 
 == Changelog ==
 
+= 1.1.4 =
+* Change the affiliate link format.
+
+= 1.1.3 =
+* Added filter 'wptaxime_button_link', which allows you to change the button link should you wish.
+* Change affiliate links to go to https://m.uber.com/.
+* Make it compatible with 4.3.
+
 = 1.1.2 =
 * Changed headers to match 4.3.
 * Tested on 4.3
