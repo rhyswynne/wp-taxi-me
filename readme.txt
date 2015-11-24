@@ -2,7 +2,7 @@
 Contributors: rhyswynne
 Tags: uber, taxi, business
 Requires at least: 3.0.1
-Tested up to: 4.3
+Tested up to: 4.4
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -60,6 +60,10 @@ Further information is on the [WP Taxi Me Documentation page](http://winwar.co.u
 Coming Soon!
 
 == Changelog ==
+
+= 1.1.5 =
+* Tested to 4.4
+* Changed the language pack format to make it compatible with wordpress.org language packs.
 
 = 1.1.4 =
 * Change the affiliate link format.

@@ -18,7 +18,7 @@ class WP_Taxi_Me_Widget_class extends WP_Widget {
 		extract( $args );
 		extract( $args, EXTR_SKIP );
 
-		$title = empty( $instance['widget_title'] ) ? _( 'Get a Taxi', 'wptaxime' ) : apply_filters( 'widget_title', $instance['widget_title'] );
+		$title = empty( $instance['widget_title'] ) ? _( 'Get a Taxi', 'wp-taxi-me' ) : apply_filters( 'widget_title', $instance['widget_title'] );
 		$text = empty( $instance['widget_text'] ) ? '' : $instance['widget_text'];
 
 		echo $before_widget;

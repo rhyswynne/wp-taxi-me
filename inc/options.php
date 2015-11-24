@@ -29,7 +29,7 @@ function wptaxime_options_page() {
                     <div id="mc_embed_signup">
                         <form action="http://gospelrhys.us1.list-manage.com/subscribe/post?u=c656fe50ec16f06f152034ea9&amp;id=d9645e38c2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                             <div class="mc-field-group">
-                                <label for="mce-EMAIL"> <?php _e( 'Email Address', 'wptaxime' ); ?>
+                                <label for="mce-EMAIL"> <?php _e( 'Email Address', 'wp-taxi-me' ); ?>
                                 </label>
                                 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"><button type="submit" name="subscribe" id="mc-embedded-subscribe" class="pea_admin_green">Sign Up!</button>
                             </div>
@@ -52,8 +52,8 @@ function wptaxime_options_page() {
             <div class="pea_admin_main_right">
                 <div class="pea_admin_box">
 
-                    <h2><?php _e( 'Like this Plugin?', 'wptaxime' ); ?></h2>
-                    <a href="<?php echo WP_TAXI_ME_EXTEND_URL; ?>" target="_blank"><button type="submit" class="pea_admin_green"><?php _e( 'Rate this plugin', 'wptaxime' ); ?> &#9733; &#9733; &#9733; &#9733; &#9733;</button></a><br><br>
+                    <h2><?php _e( 'Like this Plugin?', 'wp-taxi-me' ); ?></h2>
+                    <a href="<?php echo WP_TAXI_ME_EXTEND_URL; ?>" target="_blank"><button type="submit" class="pea_admin_green"><?php _e( 'Rate this plugin', 'wp-taxi-me' ); ?> &#9733; &#9733; &#9733; &#9733; &#9733;</button></a><br><br>
 
                     <div id="fb-root"></div>
 
@@ -105,25 +105,25 @@ function wptaxime_options_page() {
                 <?php if ( !defined( 'WP_TAXI_ME_HIDE_AD' ) ) { ?>
 
                 <div class="pea_admin_box wptaxime_admin_box">
-                    <h2><?php _e( 'WP Taxi Me Pro', 'wptaxime' ); ?></h2>
+                    <h2><?php _e( 'WP Taxi Me Pro', 'wp-taxi-me' ); ?></h2>
 
-                    <p class="pea_admin_clear"><?php _e( 'Want more features? WP Taxi Me Pro is the Premium version of WP Taxi Me, that allows you to do the following:-', 'wptaxime' ); ?></p>
+                    <p class="pea_admin_clear"><?php _e( 'Want more features? WP Taxi Me Pro is the Premium version of WP Taxi Me, that allows you to do the following:-', 'wp-taxi-me' ); ?></p>
 
                     <ul>
-                        <li><strong><?php _e( 'Button Stylings', 'wptaxime' ); ?>:</strong> <?php _e( 'Easily style buttons using a graphical interface, allowing the button to fit the style of your site.', 'wptaxime' ); ?></li>
-                        <li><strong><?php _e( 'Earn Money', 'wptaxime' ); ?>:</strong> <?php _e( 'WP Taxi Me Pro allows you specify your own affiliate link on the "Register for Uber" button, earning you free taxis and money.', 'wptaxime' ); ?></li>
+                        <li><strong><?php _e( 'Button Stylings', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'Easily style buttons using a graphical interface, allowing the button to fit the style of your site.', 'wp-taxi-me' ); ?></li>
+                        <li><strong><?php _e( 'Earn Money', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'WP Taxi Me Pro allows you specify your own affiliate link on the "Register for Uber" button, earning you free taxis and money.', 'wp-taxi-me' ); ?></li>
                     </ul>
 
-                    <p class="pea_admin_clear"><?php _e( 'To get a third off discount, use the discount code ', 'wptaxime' ); ?><strong>33FREE</strong>.</p>
+                    <p class="pea_admin_clear"><?php _e( 'To get a third off discount, use the discount code ', 'wp-taxi-me' ); ?><strong>33FREE</strong>.</p>
 
-                    <p class="pea_admin_clear text-center"><a href="http://winwar.co.uk/plugins/wp-taxi-premium/"><button class="pea_admin_green"><?php _e( 'Buy WP Taxi Me Pro', 'wptaxime' ); ?></button></a></p>
+                    <p class="pea_admin_clear text-center"><a href="http://winwar.co.uk/plugins/wp-taxi-premium/"><button class="pea_admin_green"><?php _e( 'Buy WP Taxi Me Pro', 'wp-taxi-me' ); ?></button></a></p>
 
                 </div>
 
                 <?php } ?>
 
                 <div class="pea_admin_box">
-                    <h2><?php _e( 'About the Author', 'wptaxime' ); ?></h2>
+                    <h2><?php _e( 'About the Author', 'wp-taxi-me' ); ?></h2>
 
                     <?php
                     $default = "http://reviews.evanscycles.com/static/0924-en_gb/noAvatar.gif";
@@ -135,7 +135,7 @@ function wptaxime_options_page() {
                         <div class="fb-subscribe" data-href="https://www.facebook.com/rhysywynne" data-layout="button_count" data-show-faces="false" data-width="220"></div>
                     </p>
 
-                    <p class="pea_admin_clear"><?php _e( 'Rhys Wynne is a Digital Marketing Consultant currently at FireCask and a freelance WordPress developer and blogger. His plugins have had a total of 100,000 downloads, and his premium plugins have generated four figure sums in terms of sales. Rhys likes rubbish football (supporting Colwyn Bay FC) and Professional Wrestling.', 'wptaxime' ); ?></p>
+                    <p class="pea_admin_clear"><?php _e( 'Rhys Wynne is a Digital Marketing Consultant currently at FireCask and a freelance WordPress developer and blogger. His plugins have had a total of 100,000 downloads, and his premium plugins have generated four figure sums in terms of sales. Rhys likes rubbish football (supporting Colwyn Bay FC) and Professional Wrestling.', 'wp-taxi-me' ); ?></p>
 
                 </div>
 
@@ -151,24 +151,24 @@ function wptaxime_options_page() {
 
         /* SETTINGS PAGE */
         register_setting( 'wptaxime_options', 'wptaxime_options', 'wptaxime_options_validate' );
-        add_settings_section( 'wptaxime_main', __( 'Main Settings', 'wptaxime' ), 'wptaxime_main_text', 'wptaxime_options_page' );
-        add_settings_field( 'wptaxime_business_name', __( 'Location Name', 'wptaxime' ), 'wptaxime_business_name', 'wptaxime_options_page', 'wptaxime_main' );
-        add_settings_field( 'wptaxime_address_1', __( 'Address 1', 'wptaxime' ), 'wptaxime_address_1', 'wptaxime_options_page', 'wptaxime_main' );
-        add_settings_field( 'wptaxime_address_2', __( 'Address 2', 'wptaxime' ), 'wptaxime_address_2', 'wptaxime_options_page', 'wptaxime_main' );
-        add_settings_field( 'wptaxime_state', __( 'State/County', 'wptaxime' ), 'wptaxime_state', 'wptaxime_options_page', 'wptaxime_main' );
-        add_settings_field( 'wptaxime_zip', __( 'Zip/Post Code', 'wptaxime' ), 'wptaxime_zip', 'wptaxime_options_page', 'wptaxime_main' );
-        add_settings_field( 'wptaxime_debug', __( 'Debug Mode', 'wptaxime' ), 'wptaxime_debug', 'wptaxime_options_page', 'wptaxime_main' );
+        add_settings_section( 'wptaxime_main', __( 'Main Settings', 'wp-taxi-me' ), 'wptaxime_main_text', 'wptaxime_options_page' );
+        add_settings_field( 'wptaxime_business_name', __( 'Location Name', 'wp-taxi-me' ), 'wptaxime_business_name', 'wptaxime_options_page', 'wptaxime_main' );
+        add_settings_field( 'wptaxime_address_1', __( 'Address 1', 'wp-taxi-me' ), 'wptaxime_address_1', 'wptaxime_options_page', 'wptaxime_main' );
+        add_settings_field( 'wptaxime_address_2', __( 'Address 2', 'wp-taxi-me' ), 'wptaxime_address_2', 'wptaxime_options_page', 'wptaxime_main' );
+        add_settings_field( 'wptaxime_state', __( 'State/County', 'wp-taxi-me' ), 'wptaxime_state', 'wptaxime_options_page', 'wptaxime_main' );
+        add_settings_field( 'wptaxime_zip', __( 'Zip/Post Code', 'wp-taxi-me' ), 'wptaxime_zip', 'wptaxime_options_page', 'wptaxime_main' );
+        add_settings_field( 'wptaxime_debug', __( 'Debug Mode', 'wp-taxi-me' ), 'wptaxime_debug', 'wptaxime_options_page', 'wptaxime_main' );
 
-        add_settings_section( 'wptaxime_sharing', __( 'Sharing Settings', 'wptaxime' ), 'wptaxime_sharing_text', 'wptaxime_options_page' );
-        add_settings_field( 'wptaxime_registration', __( 'Include Register for Uber Button', 'wptaxime' ), 'wptaxime_registrationlink', 'wptaxime_options_page', 'wptaxime_sharing' );
-        add_settings_field( 'wptaxime_linkback', __( 'Link back to us (optional, but appreciated)', 'wptaxime' ), 'wptaxime_linkback', 'wptaxime_options_page', 'wptaxime_sharing' );
+        add_settings_section( 'wptaxime_sharing', __( 'Sharing Settings', 'wp-taxi-me' ), 'wptaxime_sharing_text', 'wptaxime_options_page' );
+        add_settings_field( 'wptaxime_registration', __( 'Include Register for Uber Button', 'wp-taxi-me' ), 'wptaxime_registrationlink', 'wptaxime_options_page', 'wptaxime_sharing' );
+        add_settings_field( 'wptaxime_linkback', __( 'Link back to us (optional, but appreciated)', 'wp-taxi-me' ), 'wptaxime_linkback', 'wptaxime_options_page', 'wptaxime_sharing' );
 
         do_action( 'wptaxime_do_options' );
 
     }
 
     function wptaxime_main_text() {
-        ?><p><?php _e( 'Here are the settings for your business for WP Taxi Me.', 'wptaxime' ); ?></p>
+        ?><p><?php _e( 'Here are the settings for your business for WP Taxi Me.', 'wp-taxi-me' ); ?></p>
         <?php
     }
 
@@ -207,7 +207,7 @@ function wptaxime_options_page() {
     }
 
     function wptaxime_sharing_text() {
-        ?><p><?php _e( 'Here are some options to share WP Taxi Me.', 'wptaxime' ); ?></p>
+        ?><p><?php _e( 'Here are some options to share WP Taxi Me.', 'wp-taxi-me' ); ?></p>
         <?php
     }
 

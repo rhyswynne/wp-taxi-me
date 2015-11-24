@@ -49,14 +49,14 @@
 
 		if ( !empty($args['debug']) || ( $args['debug'] ) ) {
 			
-			$buttontext = apply_filters( 'wptaxime_button_text', __( 'Book A Taxi Here', 'wptaxime' )  );
+			$buttontext = apply_filters( 'wptaxime_button_text', __( 'Book A Taxi Here', 'wp-taxi-me' )  );
 			$echostring = '<p class="taxibuttonwrapper"><a href="uber://?action=setPickup&pickup=my_location&dropoff[nickname]='. $name .'&dropoff[formatted_address]=' . $address . '&dropoff[latitude]='. $args['lat'] .'&dropoff[longitude]='. $args['lng'] .'" class="taximebutton">'. $buttontext . '</a></p>';
 			
 		} else {
 
 			if ( wp_is_mobile() ) {
 
-				$buttontext = apply_filters( 'wptaxime_button_text', __( 'Book A Taxi Here', 'wptaxime' )  );
+				$buttontext = apply_filters( 'wptaxime_button_text', __( 'Book A Taxi Here', 'wp-taxi-me' )  );
 				$buttonlink = apply_filters( 'wptaxime_button_link', 'uber://?action=setPickup&pickup=my_location&dropoff[nickname]='. $name .'&dropoff[formatted_address]=' . $address . '&dropoff[latitude]='. $args['lat'] .'&dropoff[longitude]='. $args['lng'] . '&client_id=Su4EYtcPGRZw-KAz7Bvt7Qz8yreTqPRQ' );
 
 				$echostring = '<p class="taxibuttonwrapper"><a href="uber://?action=setPickup&pickup=my_location&dropoff[nickname]='. $name .'&dropoff[formatted_address]=' . $address . '&dropoff[latitude]='. $args['lat'] .'&dropoff[longitude]='. $args['lng'] .'" class="taximebutton">'. $buttontext . '</a></p>';
@@ -68,12 +68,12 @@
 		if ( $args['registration'] ) {
 			$afflink = apply_filters( 'wptaxime_change_afflink', 'https://m.uber.com/sign-up?client_id=Su4EYtcPGRZw-KAz7Bvt7Qz8yreTqPRQ' );
 
-			$echostring .= '<p class="taxibuttonwrapper"><a href="'.$afflink.'" class="taximebutton">' . __( 'Register for Uber', 'wptaxime' ) . '</a></p>';
+			$echostring .= '<p class="taxibuttonwrapper"><a href="'.$afflink.'" class="taximebutton">' . __( 'Register for Uber', 'wp-taxi-me' ) . '</a></p>';
 		}
 
 		if ( $args['linkback'] ) {
 
-			$echostring .= '<p class="taxibuttonwrapper"><a href="' . WP_TAXI_ME_PLUGIN_URL .'">WP Taxi Me</a> ' . __( 'by', 'wptaxime' ) . ' <a href="https://winwar.co.uk/">Winwar Media</a>';
+			$echostring .= '<p class="taxibuttonwrapper"><a href="' . WP_TAXI_ME_PLUGIN_URL .'">WP Taxi Me</a> ' . __( 'by', 'wp-taxi-me' ) . ' <a href="https://winwar.co.uk/">Winwar Media</a>';
 
 		}
 
