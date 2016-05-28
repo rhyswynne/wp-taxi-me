@@ -116,7 +116,7 @@ function wptaxime_options_page() {
 
                     <p class="pea_admin_clear"><?php _e( 'To get a third off discount, use the discount code ', 'wp-taxi-me' ); ?><strong>33FREE</strong>.</p>
 
-                    <p class="pea_admin_clear text-center"><a href="http://winwar.co.uk/plugins/wp-taxi-premium/"><button class="pea_admin_green"><?php _e( 'Buy WP Taxi Me Pro', 'wp-taxi-me' ); ?></button></a></p>
+                    <p class="pea_admin_clear text-center"><a href="https://winwar.co.uk/plugins/wp-taxi-premium/?utm_source=options-page&utm_medium=plugin&utm_campaign=wptaxime"><button class="pea_admin_green"><?php _e( 'Buy WP Taxi Me Pro', 'wp-taxi-me' ); ?></button></a></p>
 
                 </div>
 
