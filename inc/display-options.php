@@ -47,10 +47,16 @@
 
 		$echostring = '';
 
+		if ( !array_key_exists( 'lat', $args ) || !array_key_exists( 'lng', $args ) ) {
+			$extralatlngstring = '&dropoff[formatted_address]=' . $address;
+		} else {
+			$extralatlngstring = "";
+		}
+
 		if ( !empty($args['debug']) || ( $args['debug'] ) ) {
 			
 			$buttontext = apply_filters( 'wptaxime_button_text', __( 'Book A Taxi Here', 'wp-taxi-me' )  );
-			$echostring = '<p class="taxibuttonwrapper"><a href="uber://?action=setPickup&pickup=my_location&dropoff[nickname]='. $name .'&dropoff[formatted_address]=' . $address . '&dropoff[latitude]='. $args['lat'] .'&dropoff[longitude]='. $args['lng'] .'" class="taximebutton">'. $buttontext . '</a></p>';
+			$echostring = '<p class="taxibuttonwrapper"><a href="uber://?action=setPickup&pickup=my_location&dropoff[nickname]='. $name . $extralatlngstring . '&dropoff[latitude]='. $args['lat'] .'&dropoff[longitude]='. $args['lng'] .'" class="taximebutton">'. $buttontext . '</a></p>';
 			
 		} else {
 
@@ -76,6 +82,8 @@
 			$echostring .= '<p class="taxibuttonwrapper"><a href="' . WP_TAXI_ME_PLUGIN_URL .'">WP Taxi Me</a> ' . __( 'by', 'wp-taxi-me' ) . ' <a href="https://winwar.co.uk/">Winwar Media</a>';
 
 		}
+
+		$echostring = apply_filters( 'wptaxime_change_whole_link', $echostring );
 
 		return $echostring;
 

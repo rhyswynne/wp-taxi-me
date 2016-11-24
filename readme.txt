@@ -2,7 +2,7 @@
 Contributors: rhyswynne
 Tags: uber, taxi, business
 Requires at least: 3.0.1
-Tested up to: 4.5
+Tested up to: 4.6
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -61,10 +61,18 @@ Coming Soon!
 
 == Changelog ==
 
+= 2.0.1 =
+* Add wptaxime_change_whole_link filter to the whole link.
+
+= 2.0 =
+* Expanded the shortcode to make it more compatible with WP Taxi Me Premium.
+* Tested to 4.6
+* Fix bug in debug mode that make unresponsive on multisite.
+
 = 1.2 = 
 * Tested to 4.5
 * Added an admin notice to set up the plugin on installation, as people were getting confused.
-* Made it internationalization friendly
+* Made it internationalization friendly.
 * Corrected a spelling error in the Options Page.
 * Corrected a bunch of URLs to the HTTPS.
 
