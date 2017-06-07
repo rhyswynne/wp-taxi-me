@@ -2,7 +2,7 @@
 Contributors: rhyswynne
 Tags: uber, taxi, business
 Requires at least: 3.0.1
-Tested up to: 4.6
+Tested up to: 4.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -60,6 +60,10 @@ Further information is on the [WP Taxi Me Documentation page](https://winwar.co.
 Coming Soon!
 
 == Changelog ==
+
+= 2.1 =
+* Tested to 4.8
+* Added the ability to hide/show the Registration button on Desktop/Mobile
 
 = 2.0.1 =
 * Add wptaxime_change_whole_link filter to the whole link.

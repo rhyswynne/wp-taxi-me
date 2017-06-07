@@ -72,9 +72,12 @@
 		}
 
 		if ( $args['registration'] ) {
-			$afflink = apply_filters( 'wptaxime_change_afflink', 'https://m.uber.com/sign-up?client_id=Su4EYtcPGRZw-KAz7Bvt7Qz8yreTqPRQ' );
 
-			$echostring .= '<p class="taxibuttonwrapper"><a href="'.$afflink.'" class="taximebutton">' . __( 'Register for Uber', 'wp-taxi-me' ) . '</a></p>';
+			if ( "everywhere" == $args['registration'] || ( "mobile" == $args['registration'] && wp_is_mobile() ) || ( "desktop" == $args['registration'] && !wp_is_mobile() ) ) {
+				$afflink = apply_filters( 'wptaxime_change_afflink', 'https://m.uber.com/sign-up?client_id=Su4EYtcPGRZw-KAz7Bvt7Qz8yreTqPRQ' );
+
+				$echostring .= '<p class="taxibuttonwrapper"><a href="'.$afflink.'" class="taximebutton">' . __( 'Register for Uber', 'wp-taxi-me' ) . '</a></p>';
+			}
 		}
 
 		if ( $args['linkback'] ) {
