@@ -61,6 +61,9 @@ Coming Soon!
 
 == Changelog ==
 
+= 2.1.1 =
+* Fix error in widget using a PHP4 Construct.
+
 = 2.1 =
 * Tested to 4.8
 * Added the ability to hide/show the Registration button on Desktop/Mobile

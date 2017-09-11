@@ -110,13 +110,15 @@ function wptaxime_options_page() {
                 <p class="pea_admin_clear"><?php _e( 'Want more features? WP Taxi Me Pro is the Premium version of WP Taxi Me, that allows you to do the following:-', 'wp-taxi-me' ); ?></p>
 
                 <ul>
+                    <li><strong><?php _e( 'Lyft Integration', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'Your city has Lyft? Great stuff! You can integrate Lyft with WP Taxi Me.', 'wp-taxi-me' ); ?></li>
+                    <li><strong><?php _e( 'Multiple Buttons/Locations', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'If your business has multiple addresses, you can order taxis to each one.', 'wp-taxi-me' ); ?></li>
                     <li><strong><?php _e( 'Button Stylings', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'Easily style buttons using a graphical interface, allowing the button to fit the style of your site.', 'wp-taxi-me' ); ?></li>
-                    <li><strong><?php _e( 'Earn Money', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'WP Taxi Me Pro allows you specify your own affiliate link on the "Register for Uber" button, earning you free taxis and money.', 'wp-taxi-me' ); ?></li>
+                    <li><strong><?php _e( 'Earn Money', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'WP Taxi Me Pro allows you specify your own affiliate link on the "Register for Uber" button, earning you free taxis and money (if accepted to affiliate programme)', 'wp-taxi-me' ); ?></li>
                 </ul>
 
-                <p class="pea_admin_clear"><?php _e( 'To get a third off discount, use the discount code ', 'wp-taxi-me' ); ?><strong>33FREE</strong>.</p>
+                <p class="pea_admin_clear"><?php _e( 'To get a £5 discount, use the discount code ', 'wp-taxi-me' ); ?><strong>5FREE</strong>.</p>
 
-                <p class="pea_admin_clear text-center"><a href="https://winwar.co.uk/plugins/wp-taxi-premium/?utm_source=options-page&utm_medium=plugin&utm_campaign=wptaxime"><button class="pea_admin_green"><?php _e( 'Buy WP Taxi Me Pro', 'wp-taxi-me' ); ?></button></a></p>
+                <p class="pea_admin_clear text-center"><a href="https://www.winwar.co.uk/plugins/wp-taxi-premium/?utm_source=options-page&utm_medium=plugin&utm_campaign=wptaxime"><button class="pea_admin_green"><?php _e( 'Buy WP Taxi Me Pro', 'wp-taxi-me' ); ?></button></a></p>
 
             </div>
 

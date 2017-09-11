@@ -2,7 +2,7 @@
 
 class WP_Taxi_Me_Widget_class extends WP_Widget {
 
-	function WP_Taxi_Me_Widget_class() {
+	function __construct() {
 		parent::__construct( 'wp_taxi_me_widget', 'WP Taxi Me', array( 'description' => 'Add WP Taxi Me to the sidebar' ) );
 	}
 
