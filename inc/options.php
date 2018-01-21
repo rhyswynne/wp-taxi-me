@@ -29,9 +29,14 @@ function wptaxime_options_page() {
                     <div id="mc_embed_signup">
                         <form action="http://gospelrhys.us1.list-manage.com/subscribe/post?u=c656fe50ec16f06f152034ea9&amp;id=d9645e38c2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                             <div class="mc-field-group">
-                                <label for="mce-EMAIL"> <?php _e( 'Email Address', 'wp-taxi-me' ); ?>
+                                <label for="mce-EMAIL"> <?php _e( 'Email Address', 'inline-tweet-sharer' ); ?>
                                 </label>
-                                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"><button type="submit" name="subscribe" id="mc-embedded-subscribe" class="pea_admin_green">Sign Up!</button>
+                                <input type="hidden" value="WP Taxi Me" name="SIGNUP" class="" id="mce-SIGNUP">
+                                <input type="email" value="<?php echo $current_user->user_email; ?>" name="EMAIL" class="required email" id="mce-EMAIL" tabindex="10">
+                                <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="pea_admin_green"  tabindex="20">Sign Up!</button><br/>
+                                <label for="mce-MMERGE4">I want to Receive The Winwar Media Newsletter: </label>
+                                <input type="checkbox" value="yes" name="MMERGE4" class="" id="mce-MMERGE4" tabindex="15">
+
                             </div>
                             <div id="mce-responses" class="clear">
                                 <div class="response" id="mce-error-response" style="display:none"></div>
@@ -50,6 +55,30 @@ function wptaxime_options_page() {
                 </form>
             </div>
             <div class="pea_admin_main_right">
+
+                <?php if ( !defined( 'WP_TAXI_ME_HIDE_AD' ) ) { ?>
+
+                <div class="pea_admin_box wptaxime_admin_box">
+                    <h2><?php _e( 'WP Taxi Me Pro', 'wp-taxi-me' ); ?></h2>
+
+                    <p class="pea_admin_clear"><?php _e( 'Want more features? WP Taxi Me Pro is the Premium version of WP Taxi Me, that allows you to do the following:-', 'wp-taxi-me' ); ?></p>
+
+                    <ul>
+                        <li><strong><?php _e( 'Lyft Integration', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'Your city has Lyft? Great stuff! You can integrate Lyft with WP Taxi Me.', 'wp-taxi-me' ); ?></li>
+                        <li><strong><?php _e( 'Multiple Buttons/Locations', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'If your business has multiple addresses, you can order taxis to each one.', 'wp-taxi-me' ); ?></li>
+                        <li><strong><?php _e( 'Button Stylings', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'Easily style buttons using a graphical interface, allowing the button to fit the style of your site.', 'wp-taxi-me' ); ?></li>
+                        <li><strong><?php _e( 'Earn Money', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'WP Taxi Me Pro allows you specify your own affiliate link on the "Register for Uber" button, earning you free taxis and money (if accepted to affiliate programme)', 'wp-taxi-me' ); ?></li>
+                    </ul>
+
+                    <p class="pea_admin_clear"><?php _e( 'To get a £5 discount, use the discount code ', 'wp-taxi-me' ); ?><strong>5FREE</strong>.</p>
+
+                    <p class="pea_admin_clear text-center"><a href="https://www.winwar.co.uk/plugins/wp-taxi-premium/?utm_source=options-page&utm_medium=plugin&utm_campaign=wptaxime"><button class="pea_admin_green"><?php _e( 'Buy WP Taxi Me Pro', 'wp-taxi-me' ); ?></button></a></p>
+
+                </div>
+
+                <?php } ?>
+
+                
                 <div class="pea_admin_box">
 
                     <h2><?php _e( 'Like this Plugin?', 'wp-taxi-me' ); ?></h2>
@@ -101,28 +130,6 @@ function wptaxime_options_page() {
                 </script>
             </div>
 
-
-            <?php if ( !defined( 'WP_TAXI_ME_HIDE_AD' ) ) { ?>
-
-            <div class="pea_admin_box wptaxime_admin_box">
-                <h2><?php _e( 'WP Taxi Me Pro', 'wp-taxi-me' ); ?></h2>
-
-                <p class="pea_admin_clear"><?php _e( 'Want more features? WP Taxi Me Pro is the Premium version of WP Taxi Me, that allows you to do the following:-', 'wp-taxi-me' ); ?></p>
-
-                <ul>
-                    <li><strong><?php _e( 'Lyft Integration', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'Your city has Lyft? Great stuff! You can integrate Lyft with WP Taxi Me.', 'wp-taxi-me' ); ?></li>
-                    <li><strong><?php _e( 'Multiple Buttons/Locations', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'If your business has multiple addresses, you can order taxis to each one.', 'wp-taxi-me' ); ?></li>
-                    <li><strong><?php _e( 'Button Stylings', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'Easily style buttons using a graphical interface, allowing the button to fit the style of your site.', 'wp-taxi-me' ); ?></li>
-                    <li><strong><?php _e( 'Earn Money', 'wp-taxi-me' ); ?>:</strong> <?php _e( 'WP Taxi Me Pro allows you specify your own affiliate link on the "Register for Uber" button, earning you free taxis and money (if accepted to affiliate programme)', 'wp-taxi-me' ); ?></li>
-                </ul>
-
-                <p class="pea_admin_clear"><?php _e( 'To get a £5 discount, use the discount code ', 'wp-taxi-me' ); ?><strong>5FREE</strong>.</p>
-
-                <p class="pea_admin_clear text-center"><a href="https://www.winwar.co.uk/plugins/wp-taxi-premium/?utm_source=options-page&utm_medium=plugin&utm_campaign=wptaxime"><button class="pea_admin_green"><?php _e( 'Buy WP Taxi Me Pro', 'wp-taxi-me' ); ?></button></a></p>
-
-            </div>
-
-            <?php } ?>
 
             <div class="pea_admin_box">
                 <h2><?php _e( 'About the Author', 'wp-taxi-me' ); ?></h2>
@@ -228,7 +235,7 @@ function wptaxime_registrationlink() {
     <option value='everywhere' ".selected( 'everywhere', $selected, false )." />".__( 'Show Everywhere', 'wptaxime' )."</option>
     <option value='mobile' ".selected( 'mobile', $selected, false )." />".__( 'Show On Mobile Only', 'wptaxime' )."</option>
     <option value='desktop' ".selected( 'desktop', $selected, false )." />".__( 'Show On Desktop Only', 'wptaxime' )."</option>
-</select>";
+    </select>";
 
 }
 

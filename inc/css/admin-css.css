@@ -130,13 +130,13 @@ span.mce_inlinetweetsharer:before, i.mce-i-inlinetweetsharer:before, i.mce-i-inl
 
 
 
-.wptaxime_admin_box {
+.pea_admin_box.wptaxime_admin_box {
     /* color: #fff; */
     border-color: #73ba71;
     background: #f2fff2;
 }
 
-.wptaxime_admin_box h2 {
+.pea_admin_box.wptaxime_admin_box h2 {
     /* color: #fff; */
 }
 

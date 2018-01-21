@@ -2,7 +2,7 @@
 Contributors: rhyswynne
 Tags: uber, taxi, business
 Requires at least: 3.0.1
-Tested up to: 4.8
+Tested up to: 4.9
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -60,6 +60,13 @@ Further information is on the [WP Taxi Me Documentation page](https://winwar.co.
 Coming Soon!
 
 == Changelog ==
+
+= 2.2.1 =
+* Including a checkbox on the option page so if you want to subscribe to the newsletter you can.
+* Improved layout of Options page
+
+= 2.2 =
+* Added a couple of hooks for the Premium Version. Get on the same level as Premium.
 
 = 2.1.1 =
 * Fix error in widget using a PHP4 Construct.
