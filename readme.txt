@@ -61,6 +61,10 @@ Coming Soon!
 
 == Changelog ==
 
+= 2.3 =
+* Fix bug on options page that user details weren't automatically filled in, leading to an error if Debug mode is switched on.
+* Bumped version number up to match Premium Version
+
 = 2.2.1 =
 * Including a checkbox on the option page so if you want to subscribe to the newsletter you can.
 * Improved layout of Options page

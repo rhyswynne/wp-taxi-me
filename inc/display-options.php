@@ -36,7 +36,7 @@
 		// Do a check to make sure that we have set the lat/lng. If not, get it.
 		if ( !array_key_exists( 'lat', $args ) || !array_key_exists( 'lng', $args ) || ( array_key_exists( 'get_new_latlng', $args) && $args['get_new_latlng'] ) ) {
 
-			$geoloc = wptaxime_get_latlng_address( $address );
+			$geoloc = wptaxime_get_latlng_address( $address, $options['access_token'] );
 
 			$args['lat'] = $geoloc['lat'];
 			$args['lng'] = $geoloc['lng'];
@@ -102,17 +102,21 @@
 	Function: Get latitude & longitude for an address.
 
 */
-	function wptaxime_get_latlng_address( $address ) {
+	function wptaxime_get_latlng_address( $address, $accesstoken = '' ) {
 
 		$prepAddr = str_replace( ' ', '+', $address );
-		$geocode = file_get_contents( 'http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false' );
+		//$geocode = file_get_contents( 'http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false' );
+		
+		if ( $accesstoken ) {
+			$geocode = file_get_contents( 'https://api.mapbox.com/geocoding/v5/mapbox.places/'.$prepAddr.'.json?access_token=' . $accesstoken );
+		}
+
 		$output = json_decode( $geocode );
 
-	//format into a better array.
 		$returnarray = array(
 
-			'lat' => $output->results[0]->geometry->location->lat,
-			'lng' => $output->results[0]->geometry->location->lng
+			'lat' => $output->features[0]->geometry->coordinates[1],
+			'lng' => $output->features[0]->geometry->coordinates[0]
 
 			);
 
