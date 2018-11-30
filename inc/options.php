@@ -179,7 +179,8 @@ function wptaxime_admin_init() {
 	add_settings_field( 'wptaxime_registration', __( 'Show Register for Uber Button', 'wp-taxi-me' ), 'wptaxime_registrationlink', 'wptaxime_options_page', 'wptaxime_sharing' );
 	add_settings_field( 'wptaxime_linkback', __( 'Link back to us (optional, but appreciated)', 'wp-taxi-me' ), 'wptaxime_linkback', 'wptaxime_options_page', 'wptaxime_sharing' );
 
-	add_settings_section( 'wptaxime_api', __( 'API Settingss', 'wp-taxi-me' ), 'wptaxime_apisettings_text', 'wptaxime_options_page' );
+	add_settings_section( 'wptaxime_api', __( 'API Settings', 'wp-taxi-me' ), 'wptaxime_apisettings_text', 'wptaxime_options_page' );
+	add_settings_field( 'wptaxime_api_to_use', __( 'API to Use', 'wp-taxi-me' ), 'wptaxime_api_to_use', 'wptaxime_options_page', 'wptaxime_api' );
 	add_settings_field( 'wptaxime_access_token', __( 'Access Token', 'wp-taxi-me' ), 'wptaxime_access_token', 'wptaxime_options_page', 'wptaxime_api' );
 
 	do_action( 'wptaxime_do_options' );
@@ -256,7 +257,23 @@ function wptaxime_linkback() {
 
 
 function wptaxime_apisettings_text() {
-	?><p><?php printf( __( 'From WP Taxi Me 2.4, you will need to sign up to an API such as Mapbox to use WP Taxi Me. <a href="%s">I discuss what you need to do in the documentation here</a>. Once you sign up to Mapbox <a href="%s">here</a>, you can get an access key to add to the box below.', 'wp-taxi-me' ), 'https://www.winwar.co.uk/documentation/wp-taxi-me/?utm_source=documentation&utm_medium=plugin&utm_campaign=wptaxime#13', 'https://www.mapbox.com' ); ?></p><?php
+	?><p><?php printf( __( 'From WP Taxi Me 2.3, you will need to sign up to an API such as Mapbox to use WP Taxi Me. <a href="%s">I discuss what you need to do in the documentation here</a>. Once you sign up to Mapbox <a href="%s">here</a>, you can get an access key to add to the box below.', 'wp-taxi-me' ), 'https://www.winwar.co.uk/documentation/wp-taxi-me/?utm_source=documentation&utm_medium=plugin&utm_campaign=wptaxime#13', 'https://www.mapbox.com' ); ?></p><?php
+}
+
+function wptaxime_api_to_use() {
+	$options = get_option( 'wptaxime_options' );
+	$selected = "";
+
+	if ( $options ) {
+		if ( isset( $options['apitouse'] ) ) {
+			$selected = $options['apitouse'];
+		}
+	}
+
+	echo "<select id='wptaxime_api_to_use' name='wptaxime_options[apitouse]'>
+	<option value='mapbox' ".selected( 'mapbox', $selected, false )." />".__( 'Mapbox', 'wptaxime' )."</option>
+	<option value='google' ".selected( 'google', $selected, false )." />".__( 'Google Maps Platform', 'wptaxime' )."</option>
+	</select>";
 }
 
 function wptaxime_access_token() {
@@ -273,6 +290,7 @@ function wptaxime_options_validate( $input ) {
 	$options['state'] = trim( $input['state'] );
 	$options['zip'] = trim( $input['zip'] );
 	$options['access_token'] = trim( $input['access_token'] ); 
+	$options['apitouse'] = trim( $input['apitouse'] ); 
 
 	if (isset( $input['registration'] ) ) {
 		$options['registration'] = trim( $input['registration'] );
@@ -293,7 +311,7 @@ function wptaxime_options_validate( $input ) {
 	}
 
 	$addressstring = $input['address_1'] . " " . $input['address_2'] . " " . $input['state'] . " " . $input['zip'];
-	$geoloc = wptaxime_get_latlng_address( $addressstring, $options['access_token'] );
+	$geoloc = wptaxime_get_latlng_address( $addressstring, $options['access_token'], $options['apitouse'] );
 
 	$options['lat'] = $geoloc['lat'];
 	$options['lng'] = $geoloc['lng'];

@@ -2,7 +2,7 @@
 Contributors: rhyswynne
 Tags: uber, taxi, business
 Requires at least: 3.0.1
-Tested up to: 4.9
+Tested up to: 5.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -60,8 +60,12 @@ Further information is on the [WP Taxi Me Documentation page](https://winwar.co.
 Coming Soon!
 
 == Changelog ==
+= 2.3.1 =
+* Correct a spelling mistake on the Options Page
+* Reintroduced a Google Maps Platform filter.
 
 = 2.3 =
+* Switched to Mapbox.
 * Fix bug on options page that user details weren't automatically filled in, leading to an error if Debug mode is switched on.
 * Bumped version number up to match Premium Version
 

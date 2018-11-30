@@ -36,7 +36,7 @@
 		// Do a check to make sure that we have set the lat/lng. If not, get it.
 		if ( !array_key_exists( 'lat', $args ) || !array_key_exists( 'lng', $args ) || ( array_key_exists( 'get_new_latlng', $args) && $args['get_new_latlng'] ) ) {
 
-			$geoloc = wptaxime_get_latlng_address( $address, $options['access_token'] );
+			$geoloc = wptaxime_get_latlng_address( $address, $options['access_token'], $options['apitouse'] );
 
 			$args['lat'] = $geoloc['lat'];
 			$args['lng'] = $geoloc['lng'];
@@ -102,26 +102,42 @@
 	Function: Get latitude & longitude for an address.
 
 */
-	function wptaxime_get_latlng_address( $address, $accesstoken = '' ) {
+	function wptaxime_get_latlng_address( $address, $accesstoken = '', $apitouse = 'mapbox', $skiptransient = FALSE ) {
 
 		$prepAddr = str_replace( ' ', '+', $address );
-		//$geocode = file_get_contents( 'http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false' );
-		
-		if ( $accesstoken ) {
+
+		if ( $accesstoken && 'mapbox' == $apitouse ) {
 			$geocode = file_get_contents( 'https://api.mapbox.com/geocoding/v5/mapbox.places/'.$prepAddr.'.json?access_token=' . $accesstoken );
-		}
+			$output = json_decode( $geocode );
 
-		$output = json_decode( $geocode );
+			$returnarray = array(
 
-		$returnarray = array(
-
-			'lat' => $output->features[0]->geometry->coordinates[1],
-			'lng' => $output->features[0]->geometry->coordinates[0]
+				'lat' => $output->features[0]->geometry->coordinates[1],
+				'lng' => $output->features[0]->geometry->coordinates[0]
 
 			);
 
-		return $returnarray;
+			return $returnarray;
 
+		} elseif ( $accesstoken && 'google' == $apitouse ) {
+
+			$geocode = file_get_contents( 'https://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false&key=' . $accesstoken );
+			$output = json_decode( $geocode );
+
+			$returnarray = array(
+
+				'lat' => $output->results[0]->geometry->location->lat,
+				'lng' => $output->results[0]->geometry->location->lng
+
+			);
+
+			return $returnarray;
+		}
+
+		return array(
+			'lat' => '',
+			'lng' => ''
+		);
 	}
 
 

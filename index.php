@@ -3,7 +3,7 @@
 Plugin Name:  WP Taxi Me (Free)
 Plugin URI:   https://winwar.co.uk/plugins/wp-taxi-me/?utm_source=plugin-link&utm_medium=plugin&utm_campaign=wptaxime
 Description:  Get your customers to order taxis to your location through Taxi.
-Version:      2.3
+Version:      2.3.1
 Author:       Winwar Media
 Author URI:   https://winwar.co.uk/?utm_source=author-link&utm_medium=plugin&utm_campaign=wptaxime
 Text Domain:  wp-taxi-me
